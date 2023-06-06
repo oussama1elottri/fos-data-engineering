@@ -26,6 +26,7 @@ def get_current_weather(lat, lon):
     # using the API documented here: https://open-meteo.com/
     url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true"
     resp = requests.get(url).json()
+    print(url)
     return resp
 
 def get_weather_all_cities(cities):
@@ -46,5 +47,5 @@ def main():
     cities = get_list_of_cities()
     weather_data = get_weather_all_cities(cities)
     save_output_data(weather_data)
-
-main()
+if __name__=="__main__":
+    main()
