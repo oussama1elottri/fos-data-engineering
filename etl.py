@@ -1,4 +1,4 @@
-import extract 
-import transform
-
-extract.main()
+from extract import main as extractMain
+from transform import main as transformMain
+extractMain()
+transformMain()

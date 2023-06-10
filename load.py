@@ -17,11 +17,8 @@ for location in locations:
     print(location)
     folium.Marker(location, popup='Algiers').add_to(map)
 
-# Create a map
-
-
-# Add markers
-
 # Save the map as an HTML file
 map.save('map.html')
+
+# import folium
 
